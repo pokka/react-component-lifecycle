@@ -123,7 +123,7 @@
 
         render: function() {
           putsContent('Render');
-          return (<button onClick={this.update} className="btn btn-lg btn-warning" style={{marginRight: '5px'}} role="button">Update State: {this.state.stateCounter}(Props: {this.props.propsCounter})</button>);
+          return (<button onClick={this.update} className="btn btn-lg btn-warning" style={{marginRight: '5px'}} role="button">Update State: {this.state.stateCounter}</button>);
         }
       });
 
@@ -149,8 +149,8 @@
               <p>Inital & Update Phase</p>
               <p>
                 <span className="btn btn-lg btn-success" style={{marginRight: '5px'}} disabled="disabled" role="button">Inital</span>
-                <Lifecycle />
-                <button onClick={this.update} className="btn btn-lg btn-info" style={{marginRight: '5px'}} role="button">Update Props</button>
+                <Lifecycle propsCounter={this.state.propsCounter} />
+                <button onClick={this.update} className="btn btn-lg btn-info" style={{marginRight: '5px'}} role="button">Update Props: {this.state.propsCounter}</button>
                 <button onClick={this.unMount} className="btn btn-lg btn-danger" style={{marginRight: '5px'}} role="button">Unmount</button>
               </p>
             </div>
